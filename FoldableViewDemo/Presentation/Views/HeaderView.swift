@@ -10,6 +10,9 @@ import UIKit
 import SnapKit
 
 final class HeaderView: UICollectionReusableView, Reusable {
+    private let chevronUpImage = UIImage(systemName: "chevron.up")
+    private let chevronDownImage = UIImage(systemName: "chevron.down")
+    
     // MARK: - Components
     
     private let stackView = {
@@ -25,13 +28,13 @@ final class HeaderView: UICollectionReusableView, Reusable {
     
     private lazy var dateLabel = createLabel()
     
-    private let countButton = {
+    private lazy var countButton = {
         let button = UIButton()
         button.tintColor = .black
         button.backgroundColor = .clear
         var config = UIButton.Configuration.plain()
         config.preferredSymbolConfigurationForImage = .init(pointSize: 11.0, weight: .bold)
-        config.image = UIImage(systemName: "chevron.up")
+        config.image = chevronUpImage
         config.imagePlacement = .trailing
         config.imagePadding = 5
         config.contentInsets = .zero
@@ -98,9 +101,7 @@ final class HeaderView: UICollectionReusableView, Reusable {
             attributes: [.font: UIFont.systemFont(ofSize: 13, weight: .bold)]
         )
         countButton.setAttributedTitle(attributedTitle, for: .normal)
-        countButton.configuration?.image = viewModel.isOpen ?
-        UIImage(systemName: "chevron.up") :
-        UIImage(systemName: "chevron.down")
+        countButton.configuration?.image = viewModel.isOpen ? chevronUpImage: chevronDownImage
         countButton.isEnabled = !viewModel.cellViewModels.isEmpty
     }
 }
@@ -108,7 +109,6 @@ final class HeaderView: UICollectionReusableView, Reusable {
 private extension HeaderView {
     func createLabel() -> UILabel {
         let label = UILabel()
-        label.text = "-"
         label.font = .systemFont(ofSize: 13, weight: .bold)
         label.textColor = .label
         label.textAlignment = .center

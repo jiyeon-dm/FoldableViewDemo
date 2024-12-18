@@ -105,7 +105,6 @@ final class DetailCell: UICollectionViewCell, Reusable {
 private extension DetailCell {
     func createLabel() -> UILabel {
         let label = UILabel()
-        label.text = "-"
         label.font = .systemFont(ofSize: 13, weight: .medium)
         label.textColor = .label
         label.textAlignment = .center
