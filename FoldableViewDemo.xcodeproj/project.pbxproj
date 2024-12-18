@@ -6,27 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9058A9FF2D1163D800BB00D4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9058A9FE2D1163D800BB00D4 /* SnapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		9058A9DB2D11600A00BB00D4 /* FoldableTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoldableTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9058A9DB2D11600A00BB00D4 /* FoldableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoldableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9058A9ED2D11600B00BB00D4 /* Exceptions for "FoldableTableViewDemo" folder in "FoldableTableViewDemo" target */ = {
+		9058A9ED2D11600B00BB00D4 /* Exceptions for "FoldableViewDemo" folder in "FoldableViewDemo" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resources/Info.plist,
 			);
-			target = 9058A9DA2D11600A00BB00D4 /* FoldableTableViewDemo */;
+			target = 9058A9DA2D11600A00BB00D4 /* FoldableViewDemo */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9058A9DD2D11600A00BB00D4 /* FoldableTableViewDemo */ = {
+		9058A9DD2D11600A00BB00D4 /* FoldableViewDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				9058A9ED2D11600B00BB00D4 /* Exceptions for "FoldableTableViewDemo" folder in "FoldableTableViewDemo" target */,
+				9058A9ED2D11600B00BB00D4 /* Exceptions for "FoldableViewDemo" folder in "FoldableViewDemo" target */,
 			);
-			path = FoldableTableViewDemo;
+			path = FoldableViewDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9058A9FF2D1163D800BB00D4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +50,7 @@
 		9058A9D22D11600A00BB00D4 = {
 			isa = PBXGroup;
 			children = (
-				9058A9DD2D11600A00BB00D4 /* FoldableTableViewDemo */,
+				9058A9DD2D11600A00BB00D4 /* FoldableViewDemo */,
 				9058A9DC2D11600A00BB00D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +58,7 @@
 		9058A9DC2D11600A00BB00D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9058A9DB2D11600A00BB00D4 /* FoldableTableViewDemo.app */,
+				9058A9DB2D11600A00BB00D4 /* FoldableViewDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +66,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9058A9DA2D11600A00BB00D4 /* FoldableTableViewDemo */ = {
+		9058A9DA2D11600A00BB00D4 /* FoldableViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9058A9EE2D11600B00BB00D4 /* Build configuration list for PBXNativeTarget "FoldableTableViewDemo" */;
+			buildConfigurationList = 9058A9EE2D11600B00BB00D4 /* Build configuration list for PBXNativeTarget "FoldableViewDemo" */;
 			buildPhases = (
 				9058A9D72D11600A00BB00D4 /* Sources */,
 				9058A9D82D11600A00BB00D4 /* Frameworks */,
@@ -74,13 +79,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9058A9DD2D11600A00BB00D4 /* FoldableTableViewDemo */,
+				9058A9DD2D11600A00BB00D4 /* FoldableViewDemo */,
 			);
-			name = FoldableTableViewDemo;
+			name = FoldableViewDemo;
 			packageProductDependencies = (
+				9058A9FE2D1163D800BB00D4 /* SnapKit */,
 			);
 			productName = FoldableTableViewDemo;
-			productReference = 9058A9DB2D11600A00BB00D4 /* FoldableTableViewDemo.app */;
+			productReference = 9058A9DB2D11600A00BB00D4 /* FoldableViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -98,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9058A9D62D11600A00BB00D4 /* Build configuration list for PBXProject "FoldableTableViewDemo" */;
+			buildConfigurationList = 9058A9D62D11600A00BB00D4 /* Build configuration list for PBXProject "FoldableViewDemo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -107,12 +113,15 @@
 			);
 			mainGroup = 9058A9D22D11600A00BB00D4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9058A9FD2D1163D800BB00D4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9058A9DC2D11600A00BB00D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9058A9DA2D11600A00BB00D4 /* FoldableTableViewDemo */,
+				9058A9DA2D11600A00BB00D4 /* FoldableViewDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -147,22 +156,25 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4U273YK6RX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FoldableTableViewDemo/Info.plist;
+				INFOPLIST_FILE = FoldableViewDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ai.digitalmedic.FoldableTableViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.digitalmedic.FoldableViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -175,22 +187,25 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4U273YK6RX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FoldableTableViewDemo/Info.plist;
+				INFOPLIST_FILE = FoldableViewDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ai.digitalmedic.FoldableTableViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.digitalmedic.FoldableViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -316,7 +331,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9058A9D62D11600A00BB00D4 /* Build configuration list for PBXProject "FoldableTableViewDemo" */ = {
+		9058A9D62D11600A00BB00D4 /* Build configuration list for PBXProject "FoldableViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9058A9F12D11600B00BB00D4 /* Debug */,
@@ -325,7 +340,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9058A9EE2D11600B00BB00D4 /* Build configuration list for PBXNativeTarget "FoldableTableViewDemo" */ = {
+		9058A9EE2D11600B00BB00D4 /* Build configuration list for PBXNativeTarget "FoldableViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9058A9EF2D11600B00BB00D4 /* Debug */,
@@ -335,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9058A9FD2D1163D800BB00D4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9058A9FE2D1163D800BB00D4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9058A9FD2D1163D800BB00D4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9058A9D32D11600A00BB00D4 /* Project object */;
 }
