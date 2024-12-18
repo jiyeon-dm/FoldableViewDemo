@@ -9,9 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class DetailCell: UICollectionViewCell {
-    static let reuseIdentifier = "DetailCell"
-    
+final class DetailCell: UICollectionViewCell, Reusable {
     // MARK: - Components
     
     private let stackView = {
@@ -29,7 +27,7 @@ final class DetailCell: UICollectionViewCell {
     
     private let detailContainer = {
         let view = UIView()
-        view.backgroundColor = .systemPink.withAlphaComponent(0.7)
+        view.backgroundColor = .systemPink
         view.layer.cornerRadius = 8
         return view
     }()

@@ -9,9 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class HeaderView: UICollectionReusableView {
-    static let reuseIdentifier = "HeaderView"
-    
+final class HeaderView: UICollectionReusableView, Reusable {
     // MARK: - Components
     
     private let stackView = {

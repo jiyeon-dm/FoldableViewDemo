@@ -31,36 +31,27 @@ final class MainViewController: UIViewController {
     
     private func setupCollectionView() {
         mainView.collectionView.delegate = self
-        // 셀 데이터 바인딩
+        // 셀
         dataSource = UICollectionViewDiffableDataSource<SectionViewModel, CellViewModel>(
             collectionView: mainView.collectionView
         ) { collectionView, indexPath, cellViewModel in
-            guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: DetailCell.reuseIdentifier,
-                for: indexPath
-            ) as? DetailCell else { fatalError() }
-            
+            let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: DetailCell.self)
+            // 데이터 바인딩
             cell.configure(with: cellViewModel)
-            
             return cell
         }
-        // 헤더 데이터 바인딩
+        // 헤더
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
             guard kind == UICollectionView.elementKindSectionHeader else {
                 return UICollectionReusableView()
             }
-            
-            guard let headerView = collectionView.dequeueReusableSupplementaryView(
-                ofKind: kind,
-                withReuseIdentifier: HeaderView.reuseIdentifier,
-                for: indexPath
-            ) as? HeaderView else { return UICollectionReusableView() }
-            
-            let index = indexPath.section
-            
-            let sectionViewModel = self.dataSource.snapshot().sectionIdentifiers[index]
+            let headerView = collectionView.dequeueReusableHeader(
+                for: indexPath,
+                viewType: HeaderView.self
+            )
+            // 데이터 바인딩
+            let sectionViewModel = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
             headerView.configure(with: sectionViewModel)
-            
             // 탭 제스처 바인딩
             let tapGesture = UITapGestureRecognizer()
             headerView.addGestureRecognizer(tapGesture)
@@ -68,10 +59,9 @@ final class MainViewController: UIViewController {
                 .sink { [weak self] _ in
                     guard !sectionViewModel.cellViewModels.isEmpty else { return }
                     self?.generateHaptic()
-                    self?.mainViewModel.send(.sectionDidTap(index))
+                    self?.mainViewModel.send(.sectionDidTap(indexPath.section))
                 }
                 .store(in: &self.cancellables)
-            
             return headerView
         }
     }

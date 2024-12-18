@@ -28,15 +28,8 @@ final class MainView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(
-            DetailCell.self,
-            forCellWithReuseIdentifier: DetailCell.reuseIdentifier
-        )
-        collectionView.register(
-            HeaderView.self,
-            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: HeaderView.reuseIdentifier
-        )
+        collectionView.registerCell(cellType: DetailCell.self)
+        collectionView.registerHeader(viewType: HeaderView.self)
         return collectionView
     }()
     
